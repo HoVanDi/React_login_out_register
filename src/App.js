@@ -1,12 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home';
-import Login from './Login';
-import Register from './Register';
+import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Register';
 import { ToastContainer } from 'react-toastify';
-import Appheader from './Appheader';
-import Customer from './Customer';
+import Appheader from './components/Appheader';
+import Customer from './components/Customer';
+import Index from './components/Index';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Appheader></Appheader>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
+        <Route path='/admin' element={<Index/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
         <Route path='/customer' element={<Customer/>}></Route>
